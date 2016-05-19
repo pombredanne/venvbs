@@ -132,7 +132,7 @@ def run(python, venv_args):
 
 def main(argv=None):
     try:
-        run(sys.executable, sys.argv[1:])
+        run(sys.executable, argv)
         return
     except BootstrapError as e:
         logging.exception(e.msg, *e.args)
